@@ -1,0 +1,33 @@
+---
+title: 'Home'
+values:
+    - Luiheid
+    - Loyaliteit
+    - Stress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    Dit is de {{ title }} pagina.
+    Ja hoor, de {{ title }} pagina.
+
+    <h2>
+        Waarden van een PGM'er'
+    </h2>
+
+    <ul>
+        {% for val in values %}
+            <li>
+                {{ val }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
