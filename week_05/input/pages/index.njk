@@ -8,4 +8,18 @@ layout: base
     <h1 class="card__title">
         Dit is de {{ title }} pagina.
     </h1>
+
+    <h2>
+        Projecten
+    </h2>
+
+    <ul>
+        {% for item in collections.projects %}
+            <li>
+                <a href="{{ item.page.url }}">
+                    {{ item.content | safe }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 </div>
