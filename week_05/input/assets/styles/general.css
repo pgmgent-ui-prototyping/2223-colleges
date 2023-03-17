@@ -1,0 +1,8 @@
+body {
+    font-family: sans-serif;
+    background-color: #e9f6ff;
+}
+
+.active {
+    color: pink;
+}

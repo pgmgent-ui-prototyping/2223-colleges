@@ -1,3 +1,7 @@
-.card {
-    background-color: white;
+body {
+    color: red;
+
+    & h1 {
+        color: blue;
+    }
 }
