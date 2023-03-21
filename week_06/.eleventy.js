@@ -5,10 +5,11 @@ module.exports = (eleventyConfig) => {
 
   return {
       dir: {
-          input: './input/pages/',
-          output: 'output',
-          includes: '../_partials',
-          layouts: '../_layouts',
+        input: './input/pages/',
+        output: 'output',
+        includes: '../_partials',
+        layouts: '../_layouts',
+        data: '../_data'
       }
   }
 }
