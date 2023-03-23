@@ -1,0 +1,36 @@
+---
+nav: Contact
+title: Contacteer ons
+subtitle: Chat met onze studenten en kom meer te weten over het studentenleven en onze opleidingen.
+image: 'afbeelding_contact.png'
+main_color: 'secondary'
+tags: nav
+label: contacteer ons
+link: mailto:info@pgm.be
+---
+
+{% import "../_partials/_components.njk" as components %}
+{% extends "../_layouts/grid.njk" %}
+
+{% block left %}
+    <div class="block block--danger">
+        <h2>
+            Geen zin om te chatten?<br/>
+            Een mailtje versturen kan ook!
+        </h2>
+
+        <form>
+            <label>
+                <span>
+                    Naam
+                </span>
+
+                <input type="text" />
+            </label>
+        </form>
+    </div>
+{% endblock left %}
+
+{% block bottom %}
+    {{ components.banner(title='Vind ons terug op alle sociale media als <em>Graduaat Programmeren Artevelde</em>.', tag='h2') }}
+{% endblock bottom %}

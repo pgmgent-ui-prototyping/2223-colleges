@@ -1,0 +1,15 @@
+<nav class="navbar navbar--{{ color }}">
+    <a class="navbar__logo" href="{{ '/' | url }}">
+        PGM
+    </a>
+
+    <ul class="menu list list--unstyled">
+        {% for nav_item in collections.nav %}
+            <li class="menu__item">
+                <a class="menu__link {% if page.url == nav_item.page.url %} menu__link--active {% endif %}" href="{{ nav_item.page.url }}">
+                    {{ nav_item.data.nav }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

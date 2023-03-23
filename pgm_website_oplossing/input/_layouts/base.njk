@@ -7,18 +7,17 @@
 
     <link rel="stylesheet" href="{{ '/styles/general.css' | url }}"/>
 
-    <title>{{ title }}</title>
+    <title>{{ title | striptags }}</title>
 </head>
 <body>
-    {% include "../_partials/_nav.njk" %}
+    {% include "_navbar.njk" %}
 
     <main>
         {% block main %}
-            Standaard inhoud!
             {{ content | safe }}
         {% endblock main %}
     </main>
 
-    {% include "../_partials/_footer.njk" %}
+    {% include "_footer.njk" %}
 </body>
 </html>

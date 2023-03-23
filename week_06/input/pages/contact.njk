@@ -1,0 +1,24 @@
+---
+title: 'Contacteer ons'
+nav: Contact
+tags: nav
+image: afbeelding_contact.png
+description: Chat met onze studenten en kom meer te weten over het studentenleven en onze opleidingen.
+
+---
+
+{% import "../_comp/_banner.njk" as file %}
+{% extends "../_layouts/grid.njk" %}
+
+{% block left %}
+    <form>
+        <label>
+            <span>Name</span>
+            <input/>
+        </label>
+    </form>
+{% endblock left %}
+
+{% block bottom %}
+    {{ file.banner('Vind ons terug op alle sociale media als <em>Graduaat Programmeren Artevelde</em>.', 'h2') }}
+{% endblock bottom %}

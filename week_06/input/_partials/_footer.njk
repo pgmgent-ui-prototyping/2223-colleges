@@ -1,0 +1,31 @@
+<footer class="footer">
+   <div class="columns columns--y-spacing">
+        <strong class="columns__column title">
+            Graduaat Programmeren
+        </strong>
+
+        <a class="columns__column columns__column--right title title--light link link--unstyled" href="https://twitter.com?hashtag=pgm">
+            #pgm
+        </a>
+   </div>
+
+   <hr>
+
+   <nav class="columns columns--y-spacing">
+        <div class="columns__column">
+                <ul class="menu menu--vertical list list--unstyled">
+                    {% for nav_item in collections.nav %}
+                        <li class="menu__item">
+                            <a class="menu__link {% if page.url == nav_item.page.url  %} menu__link--active {% endif %}" href="{{ nav_item.page.url }}">
+                                {{ nav_item.data.nav }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+        </div>
+
+        <a class="columns__column columns__column--right" href="https://arteveldehogeschool.be">
+            <img class="footer__logo" src="/img/logo_artevelde.png" />
+        </a>
+   </nav>
+</footer>

@@ -1,0 +1,17 @@
+{% extends "./grid.njk" %}
+
+{% block extended %}
+    <div class="columns">
+        <div class="columns__column">
+            {% block extended_left %}
+                Linkerkant
+            {% endblock extended_left %}
+        </div>
+
+        <div class="columns__column">
+            {% block extended_right %}
+                Rechterkant
+            {% endblock extended_right %}
+        </div>
+    </div>
+{% endblock extended %}

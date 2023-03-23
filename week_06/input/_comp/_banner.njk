@@ -1,0 +1,13 @@
+{% macro banner(content, tag='h1') %}
+    <div class="banner">
+        <{{ tag }} class="banner__title">
+            {{ content | safe }}
+        </{{ tag }}>
+    </div>
+{% endmacro %}
+
+{% macro title(text) %}
+    <span>
+       {{ text }}
+    </span>
+{% endmacro %}

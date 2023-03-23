@@ -1,0 +1,15 @@
+.banner {
+    background-color: var(--medium);
+    margin: var(--spacing-base);
+    padding: var(--spacing-lg);
+
+    & .banner__title {
+        margin: 0;
+        font-size: var(--text-xl);
+
+        & em {
+            font-style: normal;
+            color: var(--secondary);
+        }
+    }
+}

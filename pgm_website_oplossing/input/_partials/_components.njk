@@ -1,0 +1,31 @@
+{% macro hero(title, subtitle, color='primary', link, label) %}
+    <section class="hero hero--{{ color }}">
+        <h1 class="title title--large">
+            {{ title }}
+        </h1>
+
+        {% if subtitle %}
+            <p>
+                {{ subtitle }}
+            </p>
+        {% endif %}
+
+        {% if label and link %}
+            <a href="{{ link }}">
+                {{ label }}
+            </a>
+        {% endif %}
+    </section>
+
+    <link href="/styles/hero.css" rel="stylesheet" />
+{% endmacro %}
+
+{% macro banner(title, tag='h1') %}
+    <section class="banner">
+        <{{ tag }} class="title banner__title">
+            {{ title | safe }}
+        </{{ tag }}>
+    </section>
+
+    <link href="/styles/banner.css" rel="stylesheet" />
+{% endmacro %}

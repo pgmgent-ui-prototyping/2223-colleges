@@ -1,0 +1,30 @@
+---
+color: transparent
+---
+
+{% import "../_partials/_components.njk" as components  %}
+
+{% extends "./base.njk" %}
+
+{% block main %}
+    {% block top %}
+        {{ components.hero(title=title, subtitle=subtitle, color=main_color, link, label) }}
+    {% endblock top %}
+
+    <div class="columns columns--contained">
+        <div class="columns__column">
+            {% block left %}
+                Left
+            {% endblock left %}
+        </div>
+
+        <div class="columns__column">
+            {% block right %}
+                <img src="/img/{{ image }}" class="image image--cover" />
+            {% endblock right %}
+        </div>
+    </div>
+
+    {% block bottom %}
+    {% endblock bottom %}
+{% endblock main %}

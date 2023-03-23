@@ -1,0 +1,10 @@
+{% import "../_comp/_banner.njk" as file %}
+{% extends "./base.njk" %}
+
+{% block main %}
+    {{ file.banner('Dit is de titel van een list layout') }}
+
+    {{ file.title('Test 1') }}
+    {{ file.title('Ramadan is gestart!') }}
+    {{ file.title('Bijna paasperiode') }}
+{% endblock main %}

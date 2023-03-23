@@ -1,0 +1,33 @@
+{% import "../_comp/_hero.njk" as f %}
+{% extends "./base.njk" %}
+
+{% block main %}
+    {{ f.hero(title, description) }}
+
+    <hr>
+
+    <div class="columns">
+        <div class="columns__column">
+            {% block left %}
+                Linkerkant
+            {% endblock left %}
+        </div>
+
+        <div class="columns__column">
+            {% block right %}
+                {% if image %}
+                    <img src="/img/{{ image }}" class="image image--cover" />
+                {% endif %}
+            {% endblock right %}
+        </div>
+    </div>
+
+    <hr>
+
+    {% block bottom %}
+        Onderkant
+    {% endblock bottom %}
+
+    {% block extended %}
+    {% endblock extended %}
+{% endblock main %}
