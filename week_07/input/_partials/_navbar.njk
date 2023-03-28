@@ -5,7 +5,7 @@
 
     <ul class="menu list list--unstyled">
     {# sort(false, false, 'data.nav.order') #}
-        {% for nav_item in collections.nav | sortByOrder %}
+        {% for nav_item in collections.nav | sortByOrder  %}
             <li class="menu__item">
                 <a class="menu__link {% if page.url == nav_item.page.url %} menu__link--active {% endif %}" href="{{ nav_item.page.url }}">
                     {{ nav_item.data.nav.title }}

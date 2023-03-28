@@ -1,7 +1,7 @@
 ---
 nav:
     title: Home
-    order: 0
+    order: 1
 title: 'PGM'
 subtitle: 'Graduaat Programmeren'
 image: 'afbeelding_home.png'
@@ -11,6 +11,8 @@ tags: nav
 {% extends "input/_layouts/grid.njk" %}
 
 {% block left %}
+    {{ 'Hello' | wrapWithSpan | safe }}
+
     <article class="block block--secondary">
         <h2 class="title">
             Wat is graduaat programmeren

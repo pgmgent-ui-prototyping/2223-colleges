@@ -1,0 +1,19 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--danger);
+    color: var(--bright);
+    margin: var(--spacing-base);
+    min-height: 80dvh;
+
+    &.hero--primary {
+        background-color: var(--primary);
+    }
+
+    &.hero--secondary {
+        background-color: var(--secondary);
+        color: var(--dark);
+    }
+}

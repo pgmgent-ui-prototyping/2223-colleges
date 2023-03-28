@@ -1,0 +1,25 @@
+{% import "../_partials/_components.njk" as components %}
+
+{% extends "./base.njk" %}
+
+{% block main %}
+    {{ components.banner(title=title) }}
+
+    <ul>
+        {% for item in collections[iterator] %}
+            <li class="columns columns--contained">
+                <strong class="title title--danger">
+                    {{ item.data.title }}
+                </strong>
+
+                <p>
+                    {{ item.data.description }}
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% block content %}
+
+    {% endblock content %}
+{% endblock main %}
