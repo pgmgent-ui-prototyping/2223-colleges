@@ -1,0 +1,11 @@
+{% import "../_partials/_components.njk" as components  %}
+
+{% extends "./base.njk" %}
+
+{% block main %}
+    {{ components.hero(title=title, subtitle=subtitle, color=main_color, link, label) }}
+
+    <article>
+        {{ content | safe }}
+    </article>
+{% endblock main %}

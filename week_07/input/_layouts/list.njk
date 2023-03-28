@@ -8,13 +8,15 @@
     <ul>
         {% for item in collections[iterator] %}
             <li class="columns columns--contained">
-                <strong class="title title--danger">
-                    {{ item.data.title }}
-                </strong>
+                <a href="{{ item.page.url }}">
+                    <strong class="title title--danger">
+                        {{ item.data.title }}
+                    </strong>
 
-                <p>
-                    {{ item.data.description }}
-                </p>
+                    <p>
+                        {{ item.data.description }}
+                    </p>
+                </a>
             </li>
         {% endfor %}
     </ul>
